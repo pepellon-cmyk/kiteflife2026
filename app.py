@@ -20,7 +20,10 @@ menu = st.sidebar.radio("Navegação", ["Visão Geral (Escola)", "Análise por A
 # Simulação de carregamento de dados (Baseado no seu ficheiro 'Aval')
 # No uso real: df = pd.read_csv("seu_arquivo_aval.csv")
 data = {
-    'Aluno': ['Beatriz Vitoria', 'Ana Cecilia', 'Francisco Neto', 'César Eduardo',]
+
+      'Aluno': ['Beatriz Vitoria', 'Ana Cecilia', 'Francisco Neto', 'César Eduardo',]
+               ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?]
     'LIDERANÇA': [4, 2, 3, 2],
     'ASSIDUIDADE': [3, 4, 5, 4],
     'CONTRA VENTO': [3, 1, 4, 1],
@@ -84,6 +87,7 @@ elif menu == "Registar Avaliação":
         if st.form_submit_button("Submeter Avaliação"):
 
             st.success(f"Avaliação de {aluno} guardada com sucesso!")
+
 
 
 
